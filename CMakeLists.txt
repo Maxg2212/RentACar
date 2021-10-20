@@ -18,5 +18,5 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(RentACar GUI/main.cpp GUI/RCWindow.cpp GUI/RCWindow.h Backtracking/Node.cpp Backtracking/Node.h Backtracking/graphHelper.h)
+add_executable(RentACar GUI/main.cpp GUI/RCWindow.cpp GUI/RCWindow.h Backtracking/Node.cpp Backtracking/Node.h Backtracking/graphHelper.h Backtracking/NodeLogistic.cpp Backtracking/NodeLogistic.h Backtracking/Graph.cpp Backtracking/Graph.h)
 target_link_libraries (RentACar sfml-graphics sfml-window sfml-system)
