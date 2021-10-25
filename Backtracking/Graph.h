@@ -65,7 +65,7 @@ private:
      * @param Path
      * @return Path hecho string
      */
-    string StringifyAnswer(vector<int> Path);
+    string StringifyAnswer(vector<int> Path, int GAS);
 
 public:
     Graph(int size);

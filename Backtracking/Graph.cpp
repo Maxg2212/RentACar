@@ -69,12 +69,16 @@ string Graph::Short(int Init, int Fin) {
     this->resetbacktracking(Fin);
     this->backtracking(--Init,--Fin,Initialvector);
     this->Nodes.at(Fin).path.push_back(Fin+1);
-    string Answer=this->StringifyAnswer(this->Nodes.at(Fin).path);
+    string Answer=this->StringifyAnswer(this->Nodes.at(Fin).path,this->Nodes.at(Fin).getgas());
     return Answer;
 }
 
-string Graph::StringifyAnswer(vector<int> Path) {
+string Graph::StringifyAnswer(vector<int> Path,int GAS) {
     string Answer;
+    string Gasanswer= to_string(GAS);
+    Answer.append("G=");
+    Answer.append(Gasanswer);
+    Answer.append("/P=");
     for(auto i=Path.begin();i!=Path.end();++i) {
         string add = to_string(*i);
         Answer.append(add);
