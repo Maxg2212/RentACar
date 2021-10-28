@@ -18,6 +18,10 @@ class Graph {
 private:
     vector<NodeLogistic> Nodes;//Contiene todos los nodos
 
+    vector<string> NameList;//Lista de nombres de las ciudades
+
+    map<int,string> Names;//Nombres relacionados a un nodo en específico
+
     string Decitions;//Guarda todas las desiciones hechas por el algoritmo
 
     int NumStep;//Guarda el paso por el que va debuggeando las decisiones
@@ -68,6 +72,18 @@ private:
      * @return Path hecho string
      */
     string StringifyAnswer(vector<int> Path, int GAS);
+
+    /**
+     * Define la lista con los nombres de las ciudades (50 ciudades en total)
+     */
+    void setNameList();
+
+/**
+ * Define o devuelve el nombre de un nodo como una ciudad
+ * @param ID
+ * @return el nombre del nodo elegido
+ */
+    string getname(int ID);
 
 public:
     /**
