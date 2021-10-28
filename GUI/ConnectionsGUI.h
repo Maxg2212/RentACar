@@ -4,9 +4,35 @@
 
 #ifndef RENTACAR_CONNECTIONSGUI_H
 #define RENTACAR_CONNECTIONSGUI_H
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
 
+using namespace sf;
+using namespace std;
 
 class ConnectionsGUI {
+public:
+    ConnectionsGUI(float x, float y, float ady_x, float ady_y, const string &gas, const string &id);
+
+    float getX() const;
+
+    float getY() const;
+
+    const string &getGas() const;
+
+    const string &getId() const;
+
+public:
+    float x;
+    float y;
+    float ady_x;
+    float ady_y;
+    string gas;
+    string ID;
+    RectangleShape connection;
 
 
 };
