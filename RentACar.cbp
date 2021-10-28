@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RentACar"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/maxgm/CLionProjects/RentACar"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/maxgm/CLionProjects/RentACar"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/maxgm/CLionProjects/RentACar"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RentACar">
+				<Option output="/home/maxgm/CLionProjects/RentACar/RentACar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maxgm/CLionProjects/RentACar"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maxgm/CLionProjects/RentACar"/>
+					<Add directory="/home/maxgm/CLionProjects/RentACar/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/maxgm/CLionProjects/RentACar/Backtracking"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 RentACar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RentACar/fast">
+				<Option output="/home/maxgm/CLionProjects/RentACar/RentACar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maxgm/CLionProjects/RentACar"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maxgm/CLionProjects/RentACar"/>
+					<Add directory="/home/maxgm/CLionProjects/RentACar/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/maxgm/CLionProjects/RentACar/Backtracking"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 RentACar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/maxgm/CLionProjects/RentACar/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/Graph.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/Graph.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/Node.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/Node.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/NodeLogistic.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/Backtracking/NodeLogistic.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/ConnectionsGUI.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/ConnectionsGUI.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/NodeGUI.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/NodeGUI.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/RCWindow.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/RCWindow.h">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/GUI/main.cpp">
+			<Option target="RentACar"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/maxgm/CLionProjects/RentACar/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
