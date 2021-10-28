@@ -53,14 +53,15 @@ void Graph::makeconnection(int Node1, int Node2, int peso) {
     this->Nodes.at(Node2).makeconnection(Node1+1,peso);
 }
 
-NodeLogistic Graph::searchnode(int ID) {
-    for(auto i=this->Nodes.begin(); i!=this->Nodes.end();i++){
-        if(i->getid()==ID){
-            return *i;
-        }else{
-            continue;
-        }
-    }
+NodeLogistic Graph::searchnode(int ID) { //este metodo tiene un error porque no tiene valor de retorno
+    //for(auto i=this->Nodes.begin(); i!=this->Nodes.end();i++){
+        //if(i->getid()==ID){
+           // return *i;
+       // }else{
+            //continue;
+       // }
+    //}
+    return 0;
 }
 
 string Graph::Short(int Init, int Fin) {

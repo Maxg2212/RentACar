@@ -1,21 +1,18 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+#include <string>
+#include <iostream>
+#include "RCWindow.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    RCWindow rcWindow(800, 600, "RentACar");
+    rcWindow.run();
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
     return 0;
 }
