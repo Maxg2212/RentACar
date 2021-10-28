@@ -35,8 +35,8 @@ void RCWindow::run() {
 
     while(window->isOpen()){
         update();
-        render();
         window->clear(Color::White);
+        render();
         window->display();
     }
 }
