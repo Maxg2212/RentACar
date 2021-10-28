@@ -10,8 +10,8 @@ using namespace sf;
 RCWindow::RCWindow(int w, int h, string title) {
     //sf::ContextSettings settings;
     //settings.antialiasingLevel = 8;
-    window = new RenderWindow(VideoMode(w,h),title,Style::Close);
-    nodeGUI = new NodeGUI(100,100,"","");
+    window = new RenderWindow(VideoMode(w,h),title,Style::Close); //sd
+    nodeGUI = new NodeGUI(100,100,"",""); //sd
 
 
 }
@@ -35,8 +35,8 @@ void RCWindow::run() {
 
     while(window->isOpen()){
         update();
-        render();
         window->clear(Color::White);
+        render();
         window->display();
     }
 }

@@ -11,7 +11,7 @@
 
 int main() {
 
-    RCWindow rcWindow(800, 600, "RentACar");
+    RCWindow rcWindow(800, 600, "RentACar"); //maikol
     rcWindow.run();
 
     return 0;
