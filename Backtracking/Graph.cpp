@@ -5,7 +5,8 @@
 #include "Graph.h"
 
 Graph::Graph(int size) {
-    this->number=0;
+    this->NumStep=0;
+    this->Totalstep=0;
     int i=0;
     while(i!=size){
         NodeLogistic newNode(i+1);
@@ -105,8 +106,36 @@ int Graph::backtracking(int Init, int End,vector<int> UnvisitedNodes) {
     map<int,int>::iterator itr;
     for(itr= this->Nodes.at(Init).connections.begin();itr!=this->Nodes.at(Init).connections.end();++itr){
         if((find(VisitedNodes.begin(),VisitedNodes.end(),itr->first)!=VisitedNodes.end())||(find(UnvisitedNodes.begin(),UnvisitedNodes.end(),itr->first)!=UnvisitedNodes.end())){//El nodo ya fue visitado o está siendo evaluado
+            //----Registrar el paso----
+            string paso;
+            paso.append(to_string(Init+1));
+            paso.append("T");
+            paso.append(to_string(itr->first));
+            paso.append("F-");
+            this->Totalstep++;
+            paso.append(to_string(Init+1));
+            paso.append("D");
+            paso.append(to_string(itr->first));
+            paso.append("F-");
+            this->Totalstep++;
+            this->Decitions.append(paso);
+            //--------------------------------------
             continue;
         }else if(itr->first-1==End){//El nodo por visitar es el objetivo
+            //----Registrar el paso----
+            string paso;
+            paso.append(to_string(Init+1));
+            paso.append("T");
+            paso.append(to_string(itr->first));
+            paso.append("T-");
+            this->Totalstep++;
+            paso.append(to_string(Init+1));
+            paso.append("D");
+            paso.append(to_string(itr->first));
+            paso.append("T-");
+            this->Totalstep++;
+            this->Decitions.append(paso);
+            //--------------------------------------
             int ActualGas=this->Nodes.at(Init).getgas();//Capacidad que se requiere para llegar al nodo actual
             int Endgas=this->Nodes.at(End).getgas();//Capacidad en el nodo
             int Travelgas=itr->second;
@@ -131,9 +160,43 @@ int Graph::backtracking(int Init, int End,vector<int> UnvisitedNodes) {
             }else{
                 this->Nodes.at(itr->first-1).setgas(this->Nodes.at(Init).getgas());
             }
+            //----Registrar el paso----
+            string paso;
+            paso.append(to_string(Init+1));
+            paso.append("T");
+            paso.append(to_string(itr->first));
+            paso.append("T-");
+            this->Totalstep++;
+            this->Decitions.append(paso);
+            //--------------------------------------
             VisitedNodes.push_back(this->backtracking(itr->first-1,End,UnvisitedNodes)+1);
             UnvisitedNodes.pop_back();
+            //----Registrar el paso----
+            paso="";
+            paso.append(to_string(Init+1));
+            paso.append("D");
+            paso.append(to_string(itr->first));
+            paso.append("T-");
+            this->Totalstep++;
+            this->Decitions.append(paso);
+            //--------------------------------------
+
         }
     }
     return Init;
+}
+
+
+string Graph::step() {
+    string nextstep;
+    int index=5*this->NumStep;
+    if (this->NumStep==this->Totalstep){
+        return "Fin";
+    }else{
+        for(int i=0;i<4;i++){
+            nextstep.push_back(this->Decitions[index+i]);
+        }
+        this->NumStep++;
+        return nextstep;
+    }
 }
