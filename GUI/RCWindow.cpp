@@ -34,16 +34,25 @@ void RCWindow::render() {
         window->draw(nodeList.at(i).getNode());
     }
 
-
 }
 
 
 void RCWindow::run() {
 
     while(window->isOpen()){
+        while(window->pollEvent(e)){
+            event();
+        }
         update();
         window->clear(Color::White);
         render();
         window->display();
     }
+}
+
+void RCWindow::event() {
+    if(e.type == Event::Closed){
+        window->close();
+    }
+
 }
