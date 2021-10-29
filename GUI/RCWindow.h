@@ -13,6 +13,7 @@
 #include <SFML/Network.hpp>
 #include "Node.h"
 #include "NodeGUI.h"
+#include <vector>
 
 using namespace sf;
 using namespace std;
@@ -40,7 +41,8 @@ private:
     int height;
     Font font;
     Text nombre_nodo;
-    NodeGUI* nodeGUI;
+    //NodeGUI nodeGUI;
+
 
 
 
