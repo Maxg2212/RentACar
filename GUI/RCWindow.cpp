@@ -3,15 +3,19 @@
 //
 
 #include "RCWindow.h"
+#include <vector>
 using namespace std;
 using namespace sf;
+
+vector<NodeGUI> nodeList;
 
 
 RCWindow::RCWindow(int w, int h, string title) {
     //sf::ContextSettings settings;
     //settings.antialiasingLevel = 8;
     window = new RenderWindow(VideoMode(w,h),title,Style::Close); //sd
-    nodeGUI = new NodeGUI(100,100,"",""); //sd
+    NodeGUI *nodeGUI = new NodeGUI(100,100,"",""); //sd
+    nodeList.push_back(*nodeGUI);
 
 
 }
@@ -26,7 +30,10 @@ void RCWindow::update() {
 }
 
 void RCWindow::render() {
-    window->draw(nodeGUI->getNode());
+    for(int i = 0; i < nodeList.size(); i++){
+        window->draw(nodeList.at(i).getNode());
+    }
+
 
 }
 
