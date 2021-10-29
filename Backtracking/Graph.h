@@ -18,9 +18,15 @@ class Graph {
 private:
     vector<NodeLogistic> Nodes;//Contiene todos los nodos
 
+    vector<string> NameList;//Lista de nombres de las ciudades
+
+    map<int,string> Names;//Nombres relacionados a un nodo en específico
+
     string Decitions;//Guarda todas las desiciones hechas por el algoritmo
 
-    int number;//Guarda el paso por el que va debuggeando las desiciones
+    int NumStep;//Guarda el paso por el que va debuggeando las decisiones
+
+    int Totalstep;//Numero total de decisiones
     /**
  * Hace las conexiones pertinentes entre los nodos
  * @param Node1 Uno de lnodos a conectar
@@ -67,7 +73,23 @@ private:
      */
     string StringifyAnswer(vector<int> Path, int GAS);
 
+    /**
+     * Define la lista con los nombres de las ciudades (50 ciudades en total)
+     */
+    void setNameList();
+
+/**
+ * Define o devuelve el nombre de un nodo como una ciudad
+ * @param ID
+ * @return el nombre del nodo elegido
+ */
+    string getname(int ID);
+
 public:
+    /**
+     * Constructor del grafo aleatorio de nodos
+     * @param size
+     */
     Graph(int size);
 
     /**
@@ -85,6 +107,12 @@ public:
      * @return Nodo con el ID correspondiente
      */
     NodeLogistic searchnode(int ID);
+
+    /**
+     * Va debuggeando el recorrido del backtracking iteración por iteracion
+     * @return string con las decisiones tomadas para un paso definido
+     */
+    string step();
 };
 
 

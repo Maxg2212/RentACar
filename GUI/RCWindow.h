@@ -30,6 +30,8 @@ public:
 
     void run();
 
+    void event();
+
 
 private:
     RenderWindow* window = NULL;
