@@ -13,8 +13,8 @@ vector<NodeGUI> nodeList;
 RCWindow::RCWindow(int w, int h, string title) {
     //sf::ContextSettings settings;
     //settings.antialiasingLevel = 8;
-    window = new RenderWindow(VideoMode(w,h),title,Style::Close); //sd
-    NodeGUI *nodeGUI = new NodeGUI(100,100,"",""); //sd
+    window = new RenderWindow(VideoMode(w,h),title,Style::Close); //max
+    NodeGUI *nodeGUI = new NodeGUI(100,100,"",""); //max
     nodeList.push_back(*nodeGUI);
 
 
@@ -30,8 +30,8 @@ void RCWindow::update() {
 }
 
 void RCWindow::render() {
-    for(int i = 0; i < nodeList.size(); i++){
-        window->draw(nodeList.at(i).getNode());
+    for(int i = 0; i < nodeList.size(); i++){ /max
+        window->draw(nodeList.at(i).getNode()); /max
     }
 
 
