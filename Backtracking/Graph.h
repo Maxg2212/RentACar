@@ -11,6 +11,8 @@
 #include "random"
 #include "string"
 #include "algorithm"
+#include "iostream"
+#include "fstream"
 
 using namespace std;
 
@@ -113,6 +115,11 @@ public:
      * @return string con las decisiones tomadas para un paso definido
      */
     string step();
+
+/**
+ * Guarda en un txt el grafo
+ */
+    void Graphsaver();
 };
 
 

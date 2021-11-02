@@ -15,6 +15,7 @@ Graph::Graph(int size) {
         this->Adminconections(i);
         i++;
     }
+    this->Graphsaver();
 }
 
 void Graph::Adminconections(int index) {
@@ -263,4 +264,27 @@ string Graph::getname(int ID) {
     }else{
         return this->Names[ID];
     }
+}
+
+void Graph::Graphsaver() {
+    ofstream Graphfile;
+    Graphfile.open("Graph.txt");
+    map<int,int>::iterator itr;
+    for(int i=0;i<this->Nodes.size();i++){
+        NodeLogistic currentNode=this->Nodes.at(i);
+        Graphfile<<to_string(currentNode.getid());
+        Graphfile<<"(";
+        for(itr=currentNode.connections.begin();itr!=currentNode.connections.end();++itr){
+            Graphfile<<to_string(itr->first);
+            Graphfile<<":";
+            Graphfile<<to_string(itr->second);
+            if(++itr==currentNode.connections.end()){
+            }else{
+                Graphfile<<",";
+            }
+            itr--;
+        }
+        Graphfile<<")\n";
+    }
+    Graphfile.close();
 }
