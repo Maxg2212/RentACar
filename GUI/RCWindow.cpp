@@ -20,7 +20,7 @@ RCWindow::RCWindow(int w, int h, string title) {
 
     window = new RenderWindow(VideoMode(w,h),title,Style::Close);
     graph1 = new Graph(6);
-    graph1->Short(1,6);
+    string shortestPath = graph1->Short(2,5);
     cout << graph1->step() << endl;
 
 
@@ -44,6 +44,13 @@ RCWindow::RCWindow(int w, int h, string title) {
     seriePasos.setOutlineThickness(1.0f);
     seriePasos.setCharacterSize(14);
     seriePasos.setPosition(1100,50);
+
+    text2.setFont(font1);
+    text2.setOutlineColor(Color::Black);
+    text2.setOutlineThickness(1.0f);
+    text2.setCharacterSize(14);
+    text2.setPosition(1000,150);
+    text2.setString(shortestPath);
 
 
     //cout << "Getting ids" << endl;
@@ -114,6 +121,7 @@ void RCWindow::render() {
 
     window->draw(c1->getConnection());
     window->draw(seriePasos);
+    window->draw(text2);
 
 }
 
