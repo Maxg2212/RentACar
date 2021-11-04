@@ -45,9 +45,6 @@ public:
     CircleShape node;
     string nodeNumber;
 
-
-
-
 };
 
 

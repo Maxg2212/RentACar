@@ -32,7 +32,7 @@ public:
 
     void event();
 
-    void determinePosition();
+private:
 
     void readFile();
 

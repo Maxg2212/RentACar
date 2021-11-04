@@ -69,7 +69,7 @@ RCWindow::RCWindow(int w, int h, string title) {
         }
 
         for(int i = 0; i < array.size(); i++){
-            cout << "Array content at " + to_string(i) + " " << array.at(i) << endl;
+            cout << line[0] << " Array content at " + to_string(i) + " " << array.at(i) << endl;
         }
 
     }
@@ -133,10 +133,6 @@ void RCWindow::event() {
     }
 }
 
-void RCWindow::determinePosition() {
-
-
-}
 
 void RCWindow::readFile() {
 
@@ -154,13 +150,5 @@ void RCWindow::readFile() {
         }
     }
     in.close();
-
-
-
-
-
-
-
-
 
 }
