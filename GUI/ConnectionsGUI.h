@@ -25,6 +25,10 @@ public:
 
     const string &getId() const;
 
+    const RectangleShape &getConnection() const;
+
+    RectangleShape Line(float x1, float y1, float x2, float y2);
+
 public:
     float x;
     float y;
@@ -33,6 +37,8 @@ public:
     string gas;
     string ID;
     RectangleShape connection;
+
+
 
 
 };

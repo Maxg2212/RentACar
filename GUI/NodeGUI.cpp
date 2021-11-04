@@ -3,17 +3,19 @@
 //
 
 #include "NodeGUI.h"
+#include <random>
 
 
-NodeGUI::NodeGUI(float x, float y, const string &adyacentes, string ID) : x(x), y(y), adyacentes(adyacentes), ID(ID) {
-    this->x = x;
-    this->y = y;
-    this->adyacentes = adyacentes;
-    this->ID = ID;
-    node.setRadius(10.f);
+NodeGUI::NodeGUI() {
+
+    x = 0.0 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/(1100.0-0-0)));
+    y = 0.0 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/(540.0-0-0)));
+
+    node.setRadius(15.f);
     node.setFillColor(Color::Blue);
-    node.setPosition(Vector2f(this->x, this->y));
-    node.setOutlineThickness(2.f);
+    node.setPosition(Vector2f(x, y));
+    node.setOutlineThickness(0.1f);
+
 }
 
 const CircleShape &NodeGUI::getNode() const {
@@ -31,4 +33,21 @@ float NodeGUI::getY() const {
 const string &NodeGUI::getAdyacentes() const {
     return adyacentes;
 }
+
+const string &NodeGUI::getId() const {
+    return ID;
+}
+
+void NodeGUI::setId(const string &id) {
+    ID = id;
+}
+
+string NodeGUI::getNodeNumber() const {
+    return nodeNumber;
+}
+
+void NodeGUI::setNodeNumber(string nodeNumber) {
+    NodeGUI::nodeNumber = nodeNumber;
+}
+
 

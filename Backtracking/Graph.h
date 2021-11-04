@@ -18,7 +18,6 @@ using namespace std;
 
 class Graph {
 private:
-    vector<NodeLogistic> Nodes;//Contiene todos los nodos
 
     vector<string> NameList;//Lista de nombres de las ciudades
 
@@ -80,14 +79,11 @@ private:
      */
     void setNameList();
 
-/**
- * Define o devuelve el nombre de un nodo como una ciudad
- * @param ID
- * @return el nombre del nodo elegido
- */
-    string getname(int ID);
 
 public:
+
+    vector<NodeLogistic> Nodes;//Contiene todos los nodos
+
     /**
      * Constructor del grafo aleatorio de nodos
      * @param size
@@ -108,7 +104,7 @@ public:
      * @param ID
      * @return Nodo con el ID correspondiente
      */
-    NodeLogistic searchnode(int ID);
+    //NodeLogistic searchnode(int ID);
 
     /**
      * Va debuggeando el recorrido del backtracking iteración por iteracion
@@ -120,7 +116,16 @@ public:
  * Guarda en un txt el grafo
  */
     void Graphsaver();
+
+    /**
+ * Define o devuelve el nombre de un nodo como una ciudad
+ * @param ID
+ * @return el nombre del nodo elegido
+ */
+    string getname(int ID);
 };
+
+
 
 
 

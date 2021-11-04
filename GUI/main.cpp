@@ -8,10 +8,15 @@
 #include <string>
 #include <iostream>
 #include "RCWindow.h"
+#include "Backtracking/Graph.h"
+
 
 int main() {
 
-    RCWindow rcWindow(800, 600, "RentACar"); //maikol
+
+
+
+    RCWindow rcWindow(1200, 580, "RentACar");
     rcWindow.run();
 
     return 0;

@@ -4,18 +4,20 @@
 
 #ifndef RENTACAR_NODEGUI_H
 #define RENTACAR_NODEGUI_H
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
+#include "ConnectionsGUI.h"
 
 using namespace sf;
 using namespace std;
 
 class NodeGUI {
 public:
-    NodeGUI(float x, float y, const string &adyacentes, string ID);
+    NodeGUI();
 
     const CircleShape &getNode() const;
 
@@ -25,6 +27,14 @@ public:
 
     const string &getAdyacentes() const;
 
+    const string &getId() const;
+
+
+    void setId(const string &id);
+
+    string getNodeNumber() const;
+
+    void setNodeNumber(string nodeNumber);
 
 
 public:
@@ -33,6 +43,9 @@ public:
     string adyacentes;
     string ID;
     CircleShape node;
+    string nodeNumber;
+
+
 
 
 };

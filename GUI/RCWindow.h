@@ -32,6 +32,11 @@ public:
 
     void event();
 
+    void determinePosition();
+
+    void readFile();
+
+
 
 private:
     RenderWindow* window = NULL;
@@ -44,6 +49,13 @@ private:
     Font font;
     Text nombre_nodo;
     //NodeGUI nodeGUI;
+    ConnectionsGUI *c1;
+    vector<string> textList;
+    vector<NodeGUI> nodesList;
+    NodeGUI nodeGui;
+    Font font1;
+    Text text1;
+
 
 
 

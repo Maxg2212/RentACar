@@ -3,8 +3,15 @@
 //
 
 #include "ConnectionsGUI.h"
+#include <math.h>
+#define PI 3.14159265
+using namespace sf;
+
 
 ConnectionsGUI::ConnectionsGUI(float x, float y, float ady_x, float ady_y, const string &gas, const string &id) : x(x), y(y), ady_x(ady_x), ady_y(ady_y), gas(gas), ID(id) {
+
+    connection = Line(300,300,500,500);
+
 }
 
 float ConnectionsGUI::getX() const {
@@ -22,3 +29,30 @@ const string &ConnectionsGUI::getGas() const {
 const string &ConnectionsGUI::getId() const {
     return ID;
 }
+
+RectangleShape ConnectionsGUI::Line(float x1, float y1, float x2, float y2) {
+
+    RectangleShape line;
+    float len, angle;
+    line.setPosition(x1,y1);
+    len = sqrt(pow(x2-x1,2) + pow(y2-y1,2));
+    angle = atan((y2-y1)/(x2-x1)) * 180/PI;
+
+    if(x2-x1 < 0 ){
+        angle += 180;
+    }
+
+    line.setSize(Vector2f(len,1));
+    line.setFillColor(Color(100,100,100));
+    line.setOutlineThickness(1);
+    line.setOutlineColor(Color(100,100,100));
+    line.setRotation(angle);
+
+    return line;
+}
+
+const RectangleShape &ConnectionsGUI::getConnection() const {
+    return connection;
+}
+
+
