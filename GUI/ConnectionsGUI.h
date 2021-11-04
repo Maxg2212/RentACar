@@ -29,6 +29,10 @@ public:
 
     RectangleShape Line(float x1, float y1, float x2, float y2);
 
+    float getAdyX() const;
+
+    float getAdyY() const;
+
 public:
     float x;
     float y;

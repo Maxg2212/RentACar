@@ -100,6 +100,7 @@ private:
     Text seriePasos;
     Graph * graph1;
     Text text2;
+    Text gas;
 
 
 

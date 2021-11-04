@@ -20,7 +20,7 @@ vector<ConnectionsGUI> connections;
 RCWindow::RCWindow(int w, int h, string title) {
 
     window = new RenderWindow(VideoMode(w,h),title,Style::Close);
-    graph1 = new Graph(9);
+    graph1 = new Graph(5);
     string shortestPath = graph1->Short(2,5);
     cout << graph1->step() << endl;
 
@@ -53,6 +53,12 @@ RCWindow::RCWindow(int w, int h, string title) {
     text2.setCharacterSize(14);
     text2.setPosition(1000,150);
     text2.setString(shortestPath);
+
+    gas.setFont(font1);
+    gas.setOutlineThickness(1.0f);
+    gas.setOutlineColor(Color::Black);
+    gas.setCharacterSize(14);
+
 
 
     //cout << "Getting ids" << endl;
@@ -110,6 +116,14 @@ void RCWindow::update() {
 }
 
 void RCWindow::render() {
+
+    for(int i = 0; i < connections.size(); i++){
+        float gasPosx = ((connections.at(i).getX() + connections.at(i).getAdyX())/2);
+        float gasPosy = ((connections.at(i).getY() + connections.at(i).getAdyY())/2);
+        gas.setPosition(gasPosx,gasPosy);
+        gas.setString("Gas: " + connections.at(i).getGas());
+        window->draw(gas);
+    }
 
     for(int i = 0; i < connections.size(); i++){
         window->draw(connections.at(i).getConnection());

@@ -55,4 +55,12 @@ const RectangleShape &ConnectionsGUI::getConnection() const {
     return connection;
 }
 
+float ConnectionsGUI::getAdyX() const {
+    return ady_x;
+}
+
+float ConnectionsGUI::getAdyY() const {
+    return ady_y;
+}
+
 
