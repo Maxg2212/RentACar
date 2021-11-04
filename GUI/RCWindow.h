@@ -70,9 +70,13 @@ private:
      *
      * @param nodeID, la direccion del nodo
      * @param adjacents, los vecinos del nodo
-     * @brief metodo encargado de crear los lazos entre cada nodo.
+     * @brief metodo encargado de crear los enlaces entre cada nodo.
      */
     void createEdge(char nodeID, vector<string> adjacents);
+
+    void changeEdgeColor(string step);
+
+
 
 
 

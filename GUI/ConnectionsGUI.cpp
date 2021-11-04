@@ -10,7 +10,7 @@ using namespace sf;
 
 ConnectionsGUI::ConnectionsGUI(float x, float y, float ady_x, float ady_y, const string &gas, const string &id) : x(x), y(y), ady_x(ady_x), ady_y(ady_y), gas(gas), ID(id) {
 
-    connection = Line(300,300,500,500);
+    connection = Line(x,y,ady_x,ady_y);
 
 }
 
@@ -44,7 +44,7 @@ RectangleShape ConnectionsGUI::Line(float x1, float y1, float x2, float y2) {
 
     line.setSize(Vector2f(len,1));
     line.setFillColor(Color(100,100,100));
-    line.setOutlineThickness(1);
+    line.setOutlineThickness(0.5);
     line.setOutlineColor(Color(100,100,100));
     line.setRotation(angle);
 

@@ -11,7 +11,7 @@ NodeGUI::NodeGUI() {
     x = 0.0 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/(1100.0-0-0)));
     y = 0.0 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/(540.0-0-0)));
 
-    node.setRadius(15.f);
+    node.setRadius(8.f);
     node.setFillColor(Color::Blue);
     node.setPosition(Vector2f(x, y));
     node.setOutlineThickness(0.1f);

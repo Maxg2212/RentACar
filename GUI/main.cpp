@@ -13,9 +13,6 @@
 
 int main() {
 
-
-
-
     RCWindow rcWindow(1200, 580, "RentACar");
     rcWindow.run();
 
