@@ -30,6 +30,7 @@ RCWindow::RCWindow(int w, int h, string title) {
         nodeList.push_back(node);
     }
 
+    //text to draw citynames in nodes
     font1.loadFromFile("../font.ttf");
     text1.setFont(font1);
     text1.setOutlineColor(Color::Black);
@@ -68,9 +69,8 @@ RCWindow::RCWindow(int w, int h, string title) {
             array.push_back(temp);
         }
 
-        for(int i = 0; i < array.size(); i++){
-            cout << line[0] << " Array content at " + to_string(i) + " " << array.at(i) << endl;
-        }
+        createEdge(line[0],array);
+
 
     }
 
@@ -150,5 +150,8 @@ void RCWindow::readFile() {
         }
     }
     in.close();
+}
+
+void RCWindow::createEdge(char nodeID, vector<string> adjacents) {
 
 }

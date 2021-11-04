@@ -36,6 +36,8 @@ private:
 
     void readFile();
 
+    void createEdge(char nodeID, vector<string> adjacents);
+
 
 
 private:
