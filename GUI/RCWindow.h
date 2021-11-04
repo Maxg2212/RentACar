@@ -12,6 +12,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include "Node.h"
+#include "Graph.h"
 #include "NodeGUI.h"
 #include <vector>
 
@@ -57,6 +58,8 @@ private:
     NodeGUI nodeGui;
     Font font1;
     Text text1;
+    Text seriePasos;
+    Graph * graph1;
 
 
 

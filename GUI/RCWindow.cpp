@@ -19,23 +19,31 @@ vector<NodeGUI> nodeList;
 RCWindow::RCWindow(int w, int h, string title) {
 
     window = new RenderWindow(VideoMode(w,h),title,Style::Close);
-    Graph graph1(6);
+    graph1 = new Graph(6);
+    graph1->Short(1,6);
+    cout << graph1->step() << endl;
 
 
-    for(int i = 0; i < graph1.Nodes.size(); i++){
+    for(int i = 0; i < graph1->Nodes.size(); i++){
         NodeGUI node;
         //cout << to_string(i) << " - " + graph1.getname(i) << endl;
-        node.setId(graph1.getname(i));
+        node.setId(graph1->getname(i));
         node.setNodeNumber(to_string(i));
         nodeList.push_back(node);
     }
 
     //text to draw citynames in nodes
-    font1.loadFromFile("../font.ttf");
+    font1.loadFromFile("font.ttf");
     text1.setFont(font1);
     text1.setOutlineColor(Color::Black);
     text1.setOutlineThickness(1.0f);
     text1.setCharacterSize(14);
+
+    seriePasos.setFont(font1);
+    seriePasos.setOutlineColor(Color::Black);
+    seriePasos.setOutlineThickness(1.0f);
+    seriePasos.setCharacterSize(14);
+    seriePasos.setPosition(1100,50);
 
 
     //cout << "Getting ids" << endl;
@@ -98,8 +106,6 @@ void RCWindow::render() {
         window->draw(nodeList.at(i).getNode());
     }
 
-
-
     for(int i = 0; i < nodeList.size(); i++) {
         text1.setPosition(nodeList.at(i).getX(), nodeList.at(i).getY());
         text1.setString(to_string(i) + " - " +nodeList.at(i).getId());
@@ -107,6 +113,7 @@ void RCWindow::render() {
     }
 
     window->draw(c1->getConnection());
+    window->draw(seriePasos);
 
 }
 
@@ -130,6 +137,13 @@ void RCWindow::event() {
     }else if(e.type == Event::MouseMoved){
         //cout <<  "X: " + to_string(Mouse::getPosition(*window).x) + " " << "Y: " + to_string(Mouse::getPosition(*window).y) + " " << endl;
 
+    }else if(e.type == Event::MouseButtonPressed){
+        if (e.mouseButton.button == sf::Mouse::Right){
+            graph1->step();
+            seriePasos.setString("Paso: " + graph1->step());
+            cout << graph1->step() << endl;
+
+        }
     }
 }
 
@@ -155,3 +169,4 @@ void RCWindow::readFile() {
 void RCWindow::createEdge(char nodeID, vector<string> adjacents) {
 
 }
+
