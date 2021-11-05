@@ -6,7 +6,7 @@
 #define RENTACAR_NODEGUI_H
 /**
  * @file NodeGUI.h
- * @author Max Garro Mora
+ * @author Max Garro Mora y Michael Valverde Navarro.
  * @brief Clase encargada de utilizar la logica del Nodo de Backtracking para asi mostrarlo en la interfaz.
  * @version 1.0
  * @date 27/10/2021
@@ -47,31 +47,31 @@ public:
     float getY() const;
 
     /**
-     *
-     * @return
+     * @brief un getter encargado de retornar los nodos adyacentes.
+     * @return adyacentes
      */
     const string &getAdyacentes() const;
 
     /**
-     *
-     * @return
+     * @brief un getter encargado de retornar la identificacion del nodo.
+     * @return ID
      */
     const string &getId() const;
 
     /**
-     *
+     * @brief un setter encargado de configurar la identificacion del nodo.
      * @param id
      */
     void setId(const string &id);
 
     /**
-     *
-     * @return
+     * @brief getter encargado de retornar el numero del nodo.
+     * @return nodeNumber
      */
     string getNodeNumber() const;
 
     /**
-     *
+     * @brief metodo encargado de setear el numero del nodo.
      * @param nodeNumber
      */
     void setNodeNumber(string nodeNumber);

@@ -6,7 +6,7 @@
 #define RENTACAR_RCWINDOW_H
 /**
  * @file RCWindow.h
- * @author Max Garro Mora
+ * @author Max Garro Mora y Michael Valverde Navarro.
  * @brief Clase que se encarga de mostrar el grafo y las rutas en pantalla.
  * @version 1.0
  * @date 14/10/2021
@@ -18,7 +18,6 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
-#include "Node.h"
 #include "Graph.h"
 #include "NodeGUI.h"
 #include <vector>
@@ -40,7 +39,7 @@ public:
     virtual ~RCWindow();
 
     /**
-     * @brief
+     * @brief metodo para pruebas.
      */
     void update();
 
@@ -74,6 +73,10 @@ private:
      */
     void createEdge(char nodeID, vector<string> adjacents);
 
+    /**
+     * @brief metodo encargado de cambiar el color de cada nodo, verde si es visitado, rojo si no corresponde a la ruta final.
+     * @param step, es el paso que se va dando cada vez que se visite un nodo.
+     */
     void changeEdgeColor(string step);
 
 
