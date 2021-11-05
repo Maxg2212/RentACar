@@ -74,6 +74,7 @@ string Graph::Short(int Init, int Fin) {
     this->backtracking(--Init,--Fin,Initialvector);
     this->Nodes.at(Fin).path.push_back(Fin+1);
     string Answer=this->StringifyAnswer(this->Nodes.at(Fin).path,this->Nodes.at(Fin).getgas());
+    cout << this->Decitions << endl;
     return Answer;
 }
 
@@ -98,6 +99,8 @@ void Graph::resetbacktracking(int Final) {
             this->Nodes.at(Final-1).setgas(100);
             this->Nodes.at(Final-1).path=reset;
         }else{
+            this->Nodes.at(i->getid()-1).setgas(0);
+            this->Nodes.at(i->getid()-1).path=reset;
             continue;
         }
     }
@@ -141,7 +144,8 @@ int Graph::backtracking(int Init, int End,vector<int> UnvisitedNodes) {
             int ActualGas=this->Nodes.at(Init).getgas();//Capacidad que se requiere para llegar al nodo actual
             int Endgas=this->Nodes.at(End).getgas();//Capacidad en el nodo
             int Travelgas=itr->second;
-            if((ActualGas<Endgas)&&(Travelgas<Endgas)){//El camino requiere menot capacidad que el actual
+            cout << ActualGas << Endgas << Travelgas << endl;
+            if((ActualGas<Endgas)&&(Travelgas<Endgas)){//El camino requiere menor capacidad que el actual
                 this->Nodes.at(End).path=UnvisitedNodes;
                 VisitedNodes.push_back(End);
                 if(ActualGas<Travelgas) {//El camino del nodo hacia el final es la máxima capacidad requerida

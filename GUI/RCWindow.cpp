@@ -20,8 +20,9 @@ vector<ConnectionsGUI> connections;
 RCWindow::RCWindow(int w, int h, string title) {
 
     window = new RenderWindow(VideoMode(w,h),title,Style::Close);
-    graph1 = new Graph(5);
-    string shortestPath = graph1->Short(2,5);
+    graph1 = new Graph(7);
+    string shortestPath = graph1->Short(1,7);
+    cout << shortestPath << endl;
     cout << graph1->step() << endl;
 
 
@@ -35,7 +36,7 @@ RCWindow::RCWindow(int w, int h, string title) {
     }
 
     //text to draw citynames in nodes
-    font1.loadFromFile("../font.ttf");
+    font1.loadFromFile("font.ttf");
     text1.setFont(font1);
     text1.setOutlineColor(Color::Black);
     text1.setOutlineThickness(1.0f);
