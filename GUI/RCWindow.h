@@ -34,7 +34,7 @@ public:
      * @param title , el titulo del juego.
      * @brief el constructor de la clase de la ventana.
      */
-    RCWindow(int w, int h, string title);
+    RCWindow(int w, int h, string title, int cantidadN, int nI, int nF);
 
     virtual ~RCWindow();
 

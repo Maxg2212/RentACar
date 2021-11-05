@@ -17,14 +17,13 @@ vector<NodeGUI> nodeList;
 vector<ConnectionsGUI> connections;
 
 
-RCWindow::RCWindow(int w, int h, string title) {
+RCWindow::RCWindow(int w, int h, string title, int cantidadN, int nI, int nF) {
 
     window = new RenderWindow(VideoMode(w,h),title,Style::Close);
-    graph1 = new Graph(7);
-    string shortestPath = graph1->Short(1,7);
+    graph1 = new Graph(cantidadN);
+    string shortestPath = graph1->Short(nI,nF);
     cout << shortestPath << endl;
     cout << graph1->step() << endl;
-
 
 
     for(int i = 0; i < graph1->Nodes.size(); i++){
@@ -33,6 +32,14 @@ RCWindow::RCWindow(int w, int h, string title) {
         node.setId(graph1->getname(i));
         node.setNodeNumber(to_string(i+1));
         nodeList.push_back(node);
+    }
+
+    for(int i = 0; i < nodeList.size(); i++){
+        if(to_string(nI) == nodeList.at(i).getNodeNumber()){
+            nodeList.at(i).node.setFillColor(Color::Cyan);
+        }else if(to_string(nF) == nodeList.at(i).getNodeNumber()){
+            nodeList.at(i).node.setFillColor(Color::Yellow);
+        }
     }
 
     //text to draw citynames in nodes
