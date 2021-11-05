@@ -58,7 +58,7 @@ public:
     const string &getId() const;
 
     /**
-     * @brief getter encargado de retornar la coneccion entre cada nodo.
+     * @brief getter encargado de retornar la conexion entre cada nodo.
      * @return coneccion
      */
     const RectangleShape &getConnection() const;
